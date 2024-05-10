@@ -1,0 +1,145 @@
+.calendar {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #b6d9ef;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.calendar-header span {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+.new-appointment-btn {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #7dc1ec;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.new-appointment-btn-icon {
+  margin: 0 0.5rem;
+  color: white;
+  background-color: #10648c;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: ce;
+}
+
+.calendar-month-selection {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-arrow-left {
+  margin: 0 0.5rem;
+}
+
+.calendar-arrow-left,
+.calendar-arrow-right {
+  background-color: #7dc1ec;
+  color: var(--text-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.calendar-dates {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.current-month {
+  color: var(--text-color);
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.selected-appointment-date {
+  color: var(--text-color);
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.calendar-date:hover {
+  background-color: #7dc1ec;
+}
+
+.calendar-appointments {
+  margin-top: 1rem;
+}
+
+.appointments {
+  margin-top: 1rem;
+}
+
+.appointments span {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 470px) {
+  .calendar {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .calendar {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .calendar {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .calendar {
+    max-width: 55%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .calendar {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .calendar {
+    max-width: 40%;
+  }
+}

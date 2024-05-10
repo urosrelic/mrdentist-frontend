@@ -1,0 +1,22 @@
+.patient-dashboard {
+  width: 100%;
+  margin-top: 1rem;
+  padding: var(--component-horizontal-padding);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.patient-dashboard h2,
+.patient-dashboard span {
+  text-align: center;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+.patient-dashboard span {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+}

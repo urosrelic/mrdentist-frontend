@@ -1,0 +1,42 @@
+.sidebar {
+  padding: var(--component-padding);
+  position: fixed;
+  height: 100%;
+  top: 70px;
+  left: -250px;
+  width: 250px;
+  transition: left 0.3s ease;
+  background-color: var(--secondary-color);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h1 {
+  color: var(--primary-color);
+}
+
+.sidebar-options {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar-option {
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.sidebar-option.login-btn {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--tertiary-color);
+  color: var(--text-color);
+  cursor: pointer;
+}

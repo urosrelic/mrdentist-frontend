@@ -1,0 +1,19 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SECTIONS */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--text-color);
+}

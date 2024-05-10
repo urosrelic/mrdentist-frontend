@@ -1,0 +1,52 @@
+.appointment {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.appointment-date {
+  background-color: #10648c;
+  color: white;
+  padding: 1rem;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0; /* Add this line */
+}
+
+.appointment-details {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.appointment-type {
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #10648c;
+}
+
+.appointment-duration {
+  color: #10648c;
+}
+
+.appointment-cancel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  flex-grow: 0;
+  cursor: pointer;
+}
