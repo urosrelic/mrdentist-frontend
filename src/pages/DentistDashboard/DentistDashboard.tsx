@@ -27,7 +27,7 @@ const DentistDashboard = () => {
   return (
     <div className='dentist-dashboard'>
       <h2>Welcome back dentist</h2>
-      <span>{user?.first_name + ' ' + user?.last_name}</span>
+      <span>{user?.firstName + ' ' + user?.lastName}</span>
       <DentistAppointmentForm />
 
       <div className='dentist-schedule'>
