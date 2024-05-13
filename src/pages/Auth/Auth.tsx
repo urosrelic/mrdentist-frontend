@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import UserModel from '../../model/UserModel';
-import './Login.css';
+import './Auth.css';
 
-const Login = () => {
+const Auth = () => {
   const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const { login, error } = useAuth();
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Login = () => {
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const responseUser: UserModel | null = await login(username);
+    const responseUser: UserModel | null = await login(username, password);
 
     if (responseUser?.role === 'dentist') {
       navigate('/dentist-dashboard');
@@ -24,11 +25,12 @@ const Login = () => {
     }
 
     setUsername('');
+    setPassword('');
   };
 
   return (
-    <div className='login-container'>
-      <form onSubmit={handleLogin} className='login-form'>
+    <div className='auth-container'>
+      <form onSubmit={handleLogin} className='auth-form'>
         <h2>Login</h2>
         <input
           type='text'
@@ -37,13 +39,19 @@ const Login = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
+        <input
+          type='password'
+          placeholder='Password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
 
         <button type='submit'>Login</button>
       </form>
-      {error && <div className='login-error-message'>{error}</div>}
-
+      {error && <div className='auth-error-message'>{error}</div>}
     </div>
   );
 };
 
-export default Login;
+export default Auth;

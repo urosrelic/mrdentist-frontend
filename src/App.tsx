@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Hero from './components/Hero/Hero';
 import useAuth from './hooks/useAuth';
+import Auth from './pages/Auth/Auth';
 import DentistDashboard from './pages/DentistDashboard/DentistDashboard';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
 import PatientDashboard from './pages/PatientDashboard/PatientDashboard';
 import PrivateRoutes from './utils/PrivateRoutes';
 import ProtectedRoute from './utils/ProtectedRoute';
@@ -42,7 +42,7 @@ function App() {
               </Route>
             </Route>
           </Route>
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Auth />} />
 
           <Route path='*' element={<ErrorPage />} />
         </Routes>

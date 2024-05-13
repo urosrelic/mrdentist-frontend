@@ -8,7 +8,7 @@ interface AuthContextProps {
   loading: boolean;
   error: string;
   userRole: string | undefined;
-  login: (username: string) => Promise<UserModel | null>;
+  login: (username: string, password: string) => Promise<UserModel | null>;
   logout: () => void;
 }
 
@@ -25,11 +25,15 @@ export const AuthProvider = ({ children }: React.PropsWithChildren) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const login = async (username: string): Promise<UserModel | null> => {
+  const login = async (
+    username: string,
+    password: string
+  ): Promise<UserModel | null> => {
     setLoading(true);
     try {
       const response = await axios.post('api/login', {
-        username,
+        username: username,
+        password: password,
       });
 
       if (response.status === 200) {
